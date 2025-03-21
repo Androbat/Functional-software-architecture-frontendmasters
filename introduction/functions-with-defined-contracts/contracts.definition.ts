@@ -2,7 +2,7 @@
 class User {
     firstName: any;
     lastName: any;
-    constructor(firstName, lastName){
+    constructor(firstName: string, lastName: string){
         this.firstName = firstName;
         this.lastName = lastName;
     }
@@ -26,5 +26,6 @@ const functionalStyle: Record<string, unknown> = {};
 // and specific interface for interacting with a function or data.
 const joinWithSpace: (...args: string[]) => string = (...args) => args.join(" ");
 
-// Identity
+// Identity, which means the function will produce the same return value
+// for a given input.
 const identity = (a: unknown) => a;

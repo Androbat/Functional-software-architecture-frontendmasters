@@ -17,5 +17,12 @@
   "bugs": {
     "url": "https://github.com/Androbat/Functional-software-architecture-frontendmasters/issues"
   },
-  "homepage": "https://github.com/Androbat/Functional-software-architecture-frontendmasters#readme"
+  "homepage": "https://github.com/Androbat/Functional-software-architecture-frontendmasters#readme",
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "arg": "^5.0.2"
+  }
 }

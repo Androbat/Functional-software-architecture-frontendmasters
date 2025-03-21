@@ -1,7 +1,7 @@
 function sum(x: number){
     return ({
         x,
-        contact: other => {
+        contact: (other: { x: number; }) => {
             sum(x + other.x)
         }
     })
@@ -9,13 +9,23 @@ function sum(x: number){
 
 const res = sum(3).contact(sum(5));
 
-const Any = x => ({
+const Any = (x: boolean) => ({
     x,
-    concat: other => {
+    concat: (other: { x: any; }) => {
         Any(x || other.x)
     }
 });
 
 const anyRes = Any(true).concat(Any(false));
+
+const Product = (x: number) => ({
+    x,
+    contact: (other: { x: number; }) => {
+        Product(x * other.x)
+    }
+});
+
+const result = Product(1).contact(Product(10));
+console.log(result)
 
 
